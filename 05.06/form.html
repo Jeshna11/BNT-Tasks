@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <style>
+        body{
+            font-family: Arial,sans-serif;
+            background: #f2f2f2;
+            padding: 10px;
+        }
+        .form-container{
+            background: #fff;
+            max-width: 500px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+        }
+        h1{
+            text-align: center;
+            color: #333;
+        }
+        label{
+            display: block;
+            margin-bottom: 4px;
+            font-weight: bold;
+        }
+        input,
+        select,
+        textarea{
+            width: 100%;
+            padding: 6px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        input[type="radio"]{
+            margin-right: 5px;
+        }
+        .gender-group{
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        input[type="file"]{
+            margin-top: 5px;
+        }
+        input[type="submit"]{
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover{
+            background-color: #45a049;
+        }
+        @media(max-width:600px){
+            .form-container{
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Admission Form</h1>
+        <form action="/submit" method="post">
+            <label for="name">NAME:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="dob">DOB:</label><br>
+            <input type="date" id="dob" name="dob" required><br><br>
+            <label for="email">EMAIL:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="number">PHONE NUMBER:</label><br>
+            <input type="tel" id="number" name="number" pattern="[0-9]{10}" required><br><br>
+            <div class="gender-group">
+                <label for="gender">GENDER:</label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br><br>
+            </div>
+            <label for="marks">10th Marks:</label>
+            <input type="number" id="marks" name="marks" min="0" max="100" required><br><br>
+            <label for="marks">12th Marks:</label>
+            <input type="number" id="marks" name="marks" min="0" max="100" required><br><br>
+            <label for="course">SELECT COURSE:</label><br>
+            <select id="course" name="course" required>
+                <option value="">Choose Course</option>
+                <option value="be">BE</option>
+                <option value="bca">BCA</option>
+                <option value="bsc_cs">B.Sc Computer Science</option>
+                <option value="bcom">B.Com</option>
+                <option value="ba">BA</option>
+            </select><br><br>
+            <label for="address">ADDRESS:</label><br>
+            <textarea id="address" name="address" rows="4" cols="40" required></textarea><br><br>
+            <label for="photo">UPLOAD PHOTO:</label><br>
+            <input type="file" id="photo" name="photo[]" multiple accept="image/*">
+            <input type="submit" value="Submit Form">
+        </form>
+    </div>
+</body>
+</html>

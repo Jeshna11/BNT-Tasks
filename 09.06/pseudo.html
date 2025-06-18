@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo</title>
+    <style>
+        /* body {
+            background-image: url('b304469e7321a9bc8225794b7b8b10fe (2).png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin-top: 100px;
+        } */
+        h1 {
+            font-family: 'Times New Roman';
+            font-size: 25px;
+            font-weight: bold;
+            color: rgb(70, 4, 4);
+            margin-left: 100px;
+        }
+        h1:hover::after {
+            content: "🫧 ";
+            transition: 0.3s;
+        }
+        ul {
+            list-style-type: none;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: bold;
+            margin-left: 70px;
+        }
+        li:hover::before {
+            content: "✔ ";
+            color: rgb(121, 13, 88);
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .box-btn {
+            border: 2px solid rgb(32, 12, 12);
+            justify-content: center;
+            display: flex;
+            width: 170px;
+            height: 50px;
+            border-radius: 28px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 30px;
+            color: rgb(53, 14, 97);
+            margin-left: 70px;
+            align-items: center;
+        }
+
+        .box-btn:hover {
+            transform: scale(1.5);
+            transition: 0.5s;
+            background-color: rgb(173, 218, 231);
+            cursor: pointer;
+        }
+
+        .box-btn::before {
+            content: "↔";
+            color: rgb(4, 53, 61);
+            font-size: 22px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .box-btn:hover::before {
+            opacity: 1;
+        }
+
+        .box-btn::after {
+            content: " ↔";
+            color: rgb(4, 53, 61);
+            font-size: 22px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .box-btn:hover::after {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>FRUITS</h1>
+    <ul>
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Mango</li>
+        <li>Grapes</li>
+        <li>Watermelon</li>
+        <li>Peach</li>
+        <li>Strawberry</li>
+    </ul>
+    <div class="box-btn">Zoom In</div>
+</body>
+
+</html>

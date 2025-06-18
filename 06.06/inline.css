@@ -1,0 +1,13 @@
+h2{
+    font-size: 25px;
+    font-style: initial;
+    color: rgb(110, 107, 107);
+    font-weight: bold;
+    text-align: right;
+}
+.class{
+    font-size: 20px;
+    font-style: italic;
+    color: black;
+    text-align: right;
+}

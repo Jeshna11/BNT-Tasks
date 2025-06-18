@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <title>HTML (Old Version)</title>
+</head>
+<body>
+
+    <!-- No semantic tags: using generic <div> -->
+    <div id="header">
+        <h1>My Website - HTML4 Style</h1>
+    </div>
+
+    <div id="nav">
+        <p><a href="#">Home</a> | <a href="#">About</a></p>
+    </div>
+
+    <div id="content">
+        <p>This page is written in old HTML using div tags and traditional structure.</p>
+        
+        <!-- Old form style with limited input types -->
+        <form>
+            <p>Username: <input type="text" name="username"></p>
+            <p><input type="submit" value="Submit"></p>
+        </form>
+
+        <!-- No native video/audio: needs external plugin like Flash -->
+        <object data="movie.swf" type="application/x-shockwave-flash" width="200" height="100">
+            <p>Flash plugin required to view this content.</p>
+        </object>
+
+        <!-- Only images, no native graphics like canvas or SVG -->
+        <p>Image Example: <img src="image.jpg" alt="Old image" width="100"></p>
+
+        <!-- No local storage: using cookies instead -->
+        <script>
+            document.cookie = "username=oldstorage";
+        </script>
+    </div>
+
+    <div id="footer">
+        <p>&copy; 2025 Old HTML Site</p>
+    </div>
+
+</body>
+</html>

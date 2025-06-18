@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 30px;
+            height: 30px;
+            border:2px solid black;
+        }
+        .first{
+            width:320px;
+            height: 250px;
+            border: 2px solid black;
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+        .second{
+            width:260px;
+            height: 200px;
+            border: 2px solid black;
+            margin-left: 35px;
+        }
+        .third{
+            width:195px;
+            height: 150px;
+            border: 2px solid black;
+            margin-left: 35px;
+            margin-top: 30px;
+        }
+        .fourth{
+            width: 125px;
+            height:800px;
+            border: 2px solid black;
+            margin-left: 30px;
+            margin-top: 35px;
+        }
+        .box1{
+            background-color: rgb(206, 169, 124);
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+        }
+        .box2{
+            background-color: rgb(144, 144, 194);
+            position: absolute;
+            margin-top: 50px;
+            margin-left: -38px;
+        }
+        .box3{
+            background-color: rgb(154, 218, 218);
+            position:relative;
+            margin-left: -35px;
+            margin-top: -30px;
+        }
+        .box4{
+            background-color: rgb(67, 133, 177);
+            position: fixed;
+            top: 118px;
+            left: 285px;
+        }
+    </style>
+</head>
+<body>
+    <div class="first">
+        <div class="box box1">1</div>
+        <div class="second">
+            <div class="box box2">2</div>
+            <div class="third">
+                <div class="box box3">3</div>
+                <div class="fourth">
+                    <div class="box box4">4</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
