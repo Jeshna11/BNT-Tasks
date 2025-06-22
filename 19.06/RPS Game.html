@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RPS Game</title>
+</head>
+<body>
+    <button onclick="playGame()">Play Rock Paper Scissors</button>
+    <script>
+        function playGame() {
+            const playerChoice = prompt("Choose: rock, paper, or scissors").toLowerCase();
+            if (!['rock', 'paper', 'scissors'].includes(playerChoice)) {
+                alert("Invalid choice! Please try again.");
+                return; 
+            }
+            const choices = ['rock', 'paper', 'scissors'];
+            const computerChoice = choices[Math.floor(Math.random() * 3)];
+            let result;
+            if (playerChoice === computerChoice) {
+                result = "It's a tie!"; 
+            } else if (
+                (playerChoice === 'rock' && computerChoice === 'scissors') ||
+                (playerChoice === 'paper' && computerChoice === 'rock') ||
+                (playerChoice === 'scissors' && computerChoice === 'paper')
+            ) {
+                result = "You win!"; 
+            } else {
+                result = "Computer wins!"; 
+            }
+            alert(`You chose ${playerChoice}\nComputer chose ${computerChoice}\n\n${result}`);
+            if (confirm("Play again?")) {
+                playGame();
+            }
+        }
+    </script>
+</body>
+</html>

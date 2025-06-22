@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+
+<body>
+    <script>
+        // let student = {name: "Jeshna",age: 22,course: "Computer Science",isPassed: true,};
+        // console.log("Object create:");
+        // console.log(student.name);
+        // console.log(student.age);
+        const parent = {
+            greet() {
+                console.log(`Hello, my name is ${this.name}!`);
+            }
+        };
+
+        const child = Object.create(parent);  // child’s prototype is parent
+        child.name = "Alice";
+
+        child.greet();  // Output: Hello, my name is Alice!
+
+    </script>
+</body>
+
+</html>

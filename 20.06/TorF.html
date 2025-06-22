@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T/F game</title>
+</head>
+<body>
+    <button onclick="playGame()">Play</button>
+    <script>
+        const trueValues=['1','"hello"','[]','{}','true','"0"','-1'];
+        const falseValues=['0','""','null','undefined','NaN','false'];
+        let totalAttempts = 0;
+        let trueCount = 0;
+        function playGame() {
+            const userInput = prompt('Enter a value:');
+            if (!trueValues.includes(userInput) && !falseValues.includes(userInput)) {
+                alert("Invalid choice! Please try again.");
+                return;
+            }
+            totalAttempts++;
+            if (trueValues.includes(userInput)) {
+                trueCount++;
+                alert(`"${userInput}" is true`);
+            } else if (falseValues.includes(userInput)) {
+                alert(`"${userInput}" is false`);
+            }
+            const again = confirm('Play again? OK = yes, Cancel = no');
+            if (again) {
+                playGame();
+            } else {
+                alert(`Game ended!\nTotal attempts: ${totalAttempts}\nCorrect true guesses: ${trueCount}`);
+            }
+        }
+    </script>
+</body>
+</html>

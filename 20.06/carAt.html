@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+    <button onclick="showCharacter()">click me</button>
+    <script>
+        function showCharacter() {
+            let word=prompt("Enter a word:");
+            let index=2; 
+            if(word && word.length>index){
+                alert("Character at index "+index+" : "+word.charAt(index));
+            }else{
+                alert("Invalid input or word too short.");
+            }
+        }
+    </script>
+</body>
+</html>

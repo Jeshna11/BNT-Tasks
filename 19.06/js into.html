@@ -1,0 +1,53 @@
+<!-- Age  -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS intro</title>
+</head>
+<body>
+    <h1>Age Checker</h1>
+    <p>Enter your age: <input type="number" id="ageInput"></p>
+    <button onclick="checkAge()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function checkAge() {
+            const age = document.getElementById("ageInput").value;
+            let message;
+
+            if (age >= 18) {
+                message = "You are an adult!";
+            } else if (age >= 13) {
+                message = "You are a teenager!";
+            } else if (age > 0) {
+                message = "You are a child!";
+            } else {
+                message = "Please enter a valid age!";
+            }
+
+            document.getElementById("result").innerText = message;
+        }
+    </script>
+</body>
+</html>
+
+<!-- Name alert -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="text" id="name" placeholder="Enter your name">
+    <button onclick="sayHello()">Submit</button>
+
+    <script>
+      function sayHello() {
+        var name = document.getElementById("name").value;
+        if (name == "") {
+          alert("Please enter your name!");
+        } else {
+          alert("Hello " + name + "!");
+        }
+      }
+    </script>
+  </body>
+</html>
+

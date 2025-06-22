@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Splice</title>
+</head>
+
+<body>
+  <button onclick="useSplice()">Splice</button>
+  <script>
+    function useSplice() {
+      let a = ["auto", "bike", "car", "bus"];
+      alert("Original array: " + a);
+      let removed = a.splice(2, 1);
+      alert("Removed item: " + removed);
+      alert("Updated array: " + a);
+    }
+    let food = ["rice", "dosa", "noodles", "shawarma","paanipuri"];
+    food.splice(1,1);
+    console.log("After Splice", food);
+    food.splice(0, 1, "biriyani");
+    console.log("After Replace", food);
+  </script>
+</body>
+
+</html>

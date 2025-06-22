@@ -1,0 +1,64 @@
+<!-- Simple DOM -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS intro2</title>
+  <style>
+    .message {
+      color: blue;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 id="title">Welcome!</h2>
+  <p class="message">This is a paragraph.</p>
+  <p class="message">This is another paragraph.</p>
+  <button onclick="changeText()">Click Me</button>
+  <script>
+    function changeText() {
+      document.getElementById("title").innerHTML = "Title Changed!";
+      let items = document.getElementsByClassName("message");
+      for (let i = 0; i < items.length; i++) {
+        items[i].innerHTML = "Paragraph changed using class!";
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+<!-- Highlight the content -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Class Selector</title>
+    <style>
+        .highlight {
+            background-color: rgb(0, 204, 255);
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Highlight Items</h1>
+    <ul>
+        <li class="item">First item</li>
+        <li class="item">Second item</li>
+        <li class="item">Third item</li>
+    </ul>
+    <button onclick="highlightItems()">Highlight</button>
+    <script>
+        function highlightItems() {
+            // Get all elements with class "item"
+            const items = document.getElementsByClassName("item");
+            // Loop through the collection
+            for (let i = 0; i < items.length; i++) {
+                items[i].classList.add("highlight");
+                items[i].innerText = `Highlighted Item ${i+1}`;
+            }
+        }
+    </script>
+</body>
+</html>
