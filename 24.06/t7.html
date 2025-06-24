@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body><br>
+    <button id="clickBtn">Click Me</button><br><br>
+    <input type="text" id="typeBox" placeholder="Type something here" />
+
+    <script>
+      $("#clickBtn").click(function () {
+        alert("Button was clicked!");
+      });
+      $("#typeBox").keydown(function () {
+        console.log("Key pressed!");
+      });
+    </script>
+  </body>
+</html>

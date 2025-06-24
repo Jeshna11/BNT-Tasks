@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Examples</title>
+</head>
+<body>
+    <script>
+        const numbers = [10, 20, 30, 40, 50];
+        console.log("array",numbers);
+
+        numbers.push(60);
+        console.log("After push:", numbers);
+
+        numbers.pop();
+        console.log("After pop:", numbers);
+
+        numbers.unshift(5);
+        console.log("After unshift:", numbers);
+
+        numbers.shift();
+        console.log("After shift:", numbers);
+
+        console.log(numbers.indexOf(30));
+
+        console.log(numbers.includes(40));
+
+        const sliced = numbers.slice(2,3);
+        console.log("Sliced", sliced);
+
+        numbers.splice(5, 1, 60); 
+        console.log("After splice:", numbers);
+
+        const moreNumbers = [70, 80];
+        const combined = numbers.concat(moreNumbers);
+        console.log("Combined arrays:", combined);
+
+        const doubled = numbers.map(n => n * 2);
+        console.log("Doubled numbers:", doubled);
+
+        const filtered = numbers.filter(n => n >=30);
+        console.log("Filtered:", filtered);
+
+        const sum = numbers.reduce((acc, n) => acc + n, 0);
+        console.log("Sum:", sum);
+
+        console.log("forEach print:");
+        numbers.forEach(n => console.log(n));
+
+        const found = numbers.find(n => n >=20);
+        console.log("First:", found);
+
+        const foundIndex = numbers.findIndex(n => n==60);
+        console.log("Index:", foundIndex);
+
+        const numsToSort = [30, 10, 50, 20];
+        numsToSort.sort((a, b) => a-b); 
+        console.log("Sorted numbers:", numsToSort);
+
+        numsToSort.reverse();
+        console.log("Reversed numbers:", numsToSort);
+
+        console.log("Joined num:", numbers.join("-"));
+
+        console.log(numbers.every(n => n >=10));
+
+        console.log(numbers.some(n => n >=30));
+
+        const nested = [1, [2, 3], [4, [5]]];
+        console.log("Flat(1):", nested.flat(1));
+        console.log("Flat(2):", nested.flat(2));
+    </script>
+</body>
+
+</html>

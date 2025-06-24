@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String Methods Demo</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        const out = document.getElementById("output");
+        const str1 = "Hello";
+        const str2 = "World";
+        const text = "  JavaScript String Example  ";
+        const csv = "red,green,blue";
+        function print(msg) {
+            out.innerHTML += `<div class="result">${msg}</div>`;
+        }
+        print(`Original str1: "${str1}"`);
+        print(`Original str2: "${str2}"`);
+        print(`Length of str1: ${str1.length}`);
+        print(`str1 + str2: ${str1 + " " + str2}`);
+        print(`Concat: ${str1.concat(" ", str2)}`);
+        print(`Uppercase: ${str1.toUpperCase()}`);
+        print(`Lowercase: ${str2.toLowerCase()}`);
+        print(`charAt(1): ${str1.charAt(1)}`);
+        print(`IndexOf 'l': ${str1.indexOf('l')}`);
+        print(`LastIndexOf 'l': ${str1.lastIndexOf('l')}`);
+        print(`Includes 'He': ${str1.includes('He')}`);
+        print(`StartsWith 'Hel': ${str1.startsWith('Hel')}`);
+        print(`EndsWith 'lo': ${str1.endsWith('lo')}`);
+        print(`Slice(1,4): ${str1.slice(1, 4)}`);
+        print(`Substring(1,4): ${str1.substring(1, 4)}`);
+        print(`Replace 'Hello' with 'Hi': ${"Hello Hello".replace("Hello", "Hi")}`);
+        print(`Replace all 'Hello': ${"Hello Hello".replace(/Hello/g, "Hi")}`);
+        print(`Split CSV: ${csv.split(",").join(" | ")}`);
+        print(`Trim: "${text.trim()}"`);
+        print(`Repeat: ${"ha".repeat(3)}`);
+        print(`PadStart: ${"5".padStart(3, "0")}`);
+        print(`PadEnd: ${"5".padEnd(3, "0")}`);
+        print(`Template literal: ${`Welcome, ${str1}!`}`);
+        print(`Compare 'apple' < 'banana': ${"apple" < "banana"}`);
+        print(`LocaleCompare 'apple' vs 'banana': ${"apple".localeCompare("banana")}`);
+    </script>
+</body>
+</html>

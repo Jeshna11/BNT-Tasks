@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Loop Examples</title>
+</head>
+<body>
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+
+    <script>
+        console.log("for loop:");
+        for (let i = 1; i <= 3; i++) {
+            console.log("Num: " + i);
+        }
+        
+        console.log("while loop:");
+        let i = 1;
+        while (i <= 3) {
+            console.log("Count: " + i);
+            i++;
+        }
+
+        console.log("for...of loop:");
+        const fruits = ["apple", "banana", "cherry"];
+        for (const fruit of fruits) {
+            console.log(fruit);
+        }
+
+        console.log("forEach loop:");
+        const colors = ["red", "green", "blue"];
+        colors.forEach(function (color) {
+            console.log(color);
+        });
+
+        console.log("Loop through <li> elements:");
+        const items = document.querySelectorAll("li");
+        items.forEach(function (item) {
+            console.log(item.innerText);
+        });
+
+        console.log(" break and continue:");
+        for (let i = 1; i <= 5; i++) {
+            if (i === 3) 
+            continue;  
+            if (i === 5) 
+            break;    
+            console.log(i);
+        }
+
+        const age = 18;
+        if (age >= 18) {
+            console.log("You are an adult.");
+        } 
+        else {
+            console.log("You are a minor.");
+        }
+    </script>
+</body>
+</html>

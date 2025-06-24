@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Try Catch Finally</title>
+</head>
+<body>
+    <script>
+        try {
+            let result = 10 / 2;
+            console.log("Result is: " + result);
+            let x = y + 1;  
+            console.log("This will not run",x);
+        }
+        catch (error) {
+            console.log("An error occurred: " + error.message);
+        }
+        finally {
+            console.log("Finally block runs no matter what.");
+        }
+    </script>
+</body>
+</html>

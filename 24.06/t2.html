@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>map filter reduce</title>
+</head>
+<body>
+    <script>
+        const numbers = [10, 20, 30, 40, 50];
+        const doubled = numbers.map(n => n * 2);
+        console.log("Doubled numbers:", doubled);
+        const filtered = numbers.filter(n => n >=30);
+        console.log("Filtered:", filtered);
+        const sum = numbers.reduce((acc, n) => acc + n, 0);
+        console.log("Sum:", sum);
+        
+        const person = {name: "Jeshna",age: 22,
+        greet: function () {
+            console.log("My Name is " + this.name + ". I'm " + this.age+" years old.");
+        }
+    };
+    person.greet();
+    
+    function Normal(name) {
+        return "Hello, " + name;
+    }
+
+    const Arrow = (name) => {
+        return "Hi, " + name;
+    };
+
+    console.log(Normal("Jeshna"));       
+    console.log(Arrow("Jeshna")); 
+    </script>
+</body>
+</html>
