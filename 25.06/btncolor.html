@@ -1,0 +1,18 @@
+<button id="btn" onclick="update()">Chnage color</button>
+<script>
+    var btn=document.getElementById("btn")
+    function update(){
+        btn.style.backgroundColor="green"
+    }
+</script>
+
+<h1 style="cursor: pointer;" onclick="deleteitem(event)">One</h1>
+<h1 style="cursor: pointer;" onclick="deleteitem(event)">Two</h1>
+<h1 style="cursor: pointer;" onclick="deleteitem(event)">Three</h1>
+<h1 style="cursor: pointer;" onclick="deleteitem(event)">Four</h1>
+<h1 style="cursor: pointer;" onclick="deleteitem(event)">Five</h1>
+<script>
+    function deleteitem(event){
+        event.target.remove()
+    }
+</script>

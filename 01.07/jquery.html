@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Selectors and Effects</title>
+  <!-- Include jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #box {
+      width: 200px;
+      height: 100px;
+      background-color: coral;
+      display: none; /* Hide initially */
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <button id="showBtn">Show Box</button>
+  <button id="fadeInBtn">Fade In Box</button>
+  <button id="fadeOutBtn">Fade Out Box</button>
+  <div id="box"></div>
+  <script>
+    // When #showBtn is clicked, show the box
+    $("#showBtn").click(() => {
+      $("#box").show(); // shows the hidden box
+    });
+    $("#fadeInBtn").click(()=>{
+      $("#box").fadeIn();
+    });
+    // When #fadeBtn is clicked, fade out the box
+    $("#fadeOutBtn").click(() => {
+      $("#box").fadeOut(); // fades out and hides the box
+    });
+  </script>
+</body>
+</html>

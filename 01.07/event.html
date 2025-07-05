@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Delegation</title>
+</head>
+<body>
+    <ul id="list">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+    </ul>
+    <script>
+        document.getElementById("list").addEventListener("click", function (e) {
+            if (e.target.tagName === "LI") {
+                alert("Item clicked: " + e.target.textContent);
+            }
+        });
+    </script>
+</body>
+</html>

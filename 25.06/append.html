@@ -1,0 +1,21 @@
+<button onclick="update()">Add</button>
+<div id="result"></div>
+<script>
+    var div=document.getElementById("result")
+    function update(){
+        var list=document.createElement("h1")
+        list.textContent="Hello"
+        div.append(list)
+    }
+</script>
+
+<h1 id="res">Name</h1>
+<button onclick="change(event)">Jeshna</button>
+<button onclick="change(event)">FSD</button>
+<button onclick="change(event)">22</button>
+<script>
+    var h1=document.getElementById("res")
+    function change(event){
+        h1.textContent=event.target.textContent
+    }
+</script>
